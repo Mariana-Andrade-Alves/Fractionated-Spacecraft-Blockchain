@@ -1,0 +1,515 @@
+{
+  "contractName": "CallerContractInterface",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "int256",
+          "name": "_sensorValue",
+          "type": "int256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_sensorType",
+          "type": "string"
+        }
+      ],
+      "name": "callback",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_oracleInstanceAddress",
+          "type": "address"
+        }
+      ],
+      "name": "updateSensorValue",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.3+commit.8dda9521\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"int256\",\"name\":\"_sensorValue\",\"type\":\"int256\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"_sensorType\",\"type\":\"string\"}],\"name\":\"callback\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_oracleInstanceAddress\",\"type\":\"address\"}],\"name\":\"updateSensorValue\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/rsx02/hyperledger-besu/SubSystem Blockchain/contracts/CallerContractInterface.sol\":\"CallerContractInterface\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/rsx02/hyperledger-besu/SubSystem Blockchain/contracts/CallerContractInterface.sol\":{\"keccak256\":\"0x167cd82bf36ab8e2af061eacc8ede8c6fec4ab13e24b5a69bb0fc851c9fb9398\",\"urls\":[\"bzz-raw://855aedb33cd85a019bbd494a386cd4c2c1bef606338340be8d9d36268991be64\",\"dweb:/ipfs/QmPK8aY4bNvyQjeqwJ6Wd4ux93cMwDM6PfF3cqUj8PUGCE\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.6.3;\r\n\r\ninterface CallerContractInterface {\r\n    function callback(\r\n        int256 _sensorValue,\r\n        uint256 id,\r\n        string calldata _sensorType\r\n    ) external;\r\n\r\n    function updateSensorValue(address _oracleInstanceAddress) external;\r\n}\r\n",
+  "sourcePath": "/home/rsx02/hyperledger-besu/SubSystem Blockchain/contracts/CallerContractInterface.sol",
+  "ast": {
+    "absolutePath": "/home/rsx02/hyperledger-besu/SubSystem Blockchain/contracts/CallerContractInterface.sol",
+    "exportedSymbols": {
+      "CallerContractInterface": [
+        749
+      ]
+    },
+    "id": 750,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 734,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".3"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:2"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 749,
+        "linearizedBaseContracts": [
+          749
+        ],
+        "name": "CallerContractInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "7e87b5e3",
+            "id": 743,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "callback",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 741,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 736,
+                  "name": "_sensorValue",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 743,
+                  "src": "95:19:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 735,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "95:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 738,
+                  "name": "id",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 743,
+                  "src": "125:10:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 737,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "125:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 740,
+                  "name": "_sensorType",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 743,
+                  "src": "146:27:2",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 739,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "146:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "84:96:2"
+            },
+            "returnParameters": {
+              "id": 742,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "189:0:2"
+            },
+            "scope": 749,
+            "src": "67:123:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "450ddda8",
+            "id": 748,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateSensorValue",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 746,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 745,
+                  "name": "_oracleInstanceAddress",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 748,
+                  "src": "225:30:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 744,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "225:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "224:32:2"
+            },
+            "returnParameters": {
+              "id": 747,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "265:0:2"
+            },
+            "scope": 749,
+            "src": "198:68:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 750,
+        "src": "26:243:2"
+      }
+    ],
+    "src": "0:271:2"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/home/rsx02/hyperledger-besu/SubSystem Blockchain/contracts/CallerContractInterface.sol",
+      "exportedSymbols": {
+        "CallerContractInterface": [
+          749
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.6",
+            ".3"
+          ]
+        },
+        "id": 734,
+        "name": "PragmaDirective",
+        "src": "0:22:2"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            749
+          ],
+          "name": "CallerContractInterface",
+          "scope": 750
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "7e87b5e3",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "callback",
+              "overrides": null,
+              "scope": 749,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_sensorValue",
+                      "overrides": null,
+                      "scope": 743,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int256",
+                          "type": "int256"
+                        },
+                        "id": 735,
+                        "name": "ElementaryTypeName",
+                        "src": "95:6:2"
+                      }
+                    ],
+                    "id": 736,
+                    "name": "VariableDeclaration",
+                    "src": "95:19:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "id",
+                      "overrides": null,
+                      "scope": 743,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 737,
+                        "name": "ElementaryTypeName",
+                        "src": "125:7:2"
+                      }
+                    ],
+                    "id": 738,
+                    "name": "VariableDeclaration",
+                    "src": "125:10:2"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_sensorType",
+                      "overrides": null,
+                      "scope": 743,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 739,
+                        "name": "ElementaryTypeName",
+                        "src": "146:6:2"
+                      }
+                    ],
+                    "id": 740,
+                    "name": "VariableDeclaration",
+                    "src": "146:27:2"
+                  }
+                ],
+                "id": 741,
+                "name": "ParameterList",
+                "src": "84:96:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 742,
+                "name": "ParameterList",
+                "src": "189:0:2"
+              }
+            ],
+            "id": 743,
+            "name": "FunctionDefinition",
+            "src": "67:123:2"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "450ddda8",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "updateSensorValue",
+              "overrides": null,
+              "scope": 749,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_oracleInstanceAddress",
+                      "overrides": null,
+                      "scope": 748,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 744,
+                        "name": "ElementaryTypeName",
+                        "src": "225:7:2"
+                      }
+                    ],
+                    "id": 745,
+                    "name": "VariableDeclaration",
+                    "src": "225:30:2"
+                  }
+                ],
+                "id": 746,
+                "name": "ParameterList",
+                "src": "224:32:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 747,
+                "name": "ParameterList",
+                "src": "265:0:2"
+              }
+            ],
+            "id": 748,
+            "name": "FunctionDefinition",
+            "src": "198:68:2"
+          }
+        ],
+        "id": 749,
+        "name": "ContractDefinition",
+        "src": "26:243:2"
+      }
+    ],
+    "id": 750,
+    "name": "SourceUnit",
+    "src": "0:271:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.3+commit.8dda9521.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-06-18T07:43:27.844Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

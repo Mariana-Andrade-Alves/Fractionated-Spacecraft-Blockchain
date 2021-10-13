@@ -1,0 +1,256 @@
+{
+  "contractName": "SensorValueOracleInterface",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getLatestSensorValue",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.3+commit.8dda9521\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getLatestSensorValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/rsx02/hyperledger-besu/SubSystem Blockchain/contracts/SensorValueOracleInterface.sol\":\"SensorValueOracleInterface\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/rsx02/hyperledger-besu/SubSystem Blockchain/contracts/SensorValueOracleInterface.sol\":{\"keccak256\":\"0xc67d85503da49e21ad2fa38e4edd7c36f63aa11830403d747a2b8499beb61f5d\",\"urls\":[\"bzz-raw://c65f17f8f1288486d0db52d477563b3456c907fdd0fadab191004837143f79a4\",\"dweb:/ipfs/QmRFue4hy9qFkz8s3cpZwqMZmtgSz9GxKeNgPiR39WHgWX\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.6.3;\r\n\r\ninterface SensorValueOracleInterface {\r\n    function getLatestSensorValue() external returns (uint256);\r\n}\r\n",
+  "sourcePath": "/home/rsx02/hyperledger-besu/SubSystem Blockchain/contracts/SensorValueOracleInterface.sol",
+  "ast": {
+    "absolutePath": "/home/rsx02/hyperledger-besu/SubSystem Blockchain/contracts/SensorValueOracleInterface.sol",
+    "exportedSymbols": {
+      "SensorValueOracleInterface": [
+        1773
+      ]
+    },
+    "id": 1774,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1767,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".3"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:8"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 1773,
+        "linearizedBaseContracts": [
+          1773
+        ],
+        "name": "SensorValueOracleInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "3b6f1566",
+            "id": 1772,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLatestSensorValue",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 1768,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "99:2:8"
+            },
+            "returnParameters": {
+              "id": 1771,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1770,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1772,
+                  "src": "120:7:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1769,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "120:7:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "119:9:8"
+            },
+            "scope": 1773,
+            "src": "70:59:8",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1774,
+        "src": "26:106:8"
+      }
+    ],
+    "src": "0:134:8"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/home/rsx02/hyperledger-besu/SubSystem Blockchain/contracts/SensorValueOracleInterface.sol",
+      "exportedSymbols": {
+        "SensorValueOracleInterface": [
+          1773
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.6",
+            ".3"
+          ]
+        },
+        "id": 1767,
+        "name": "PragmaDirective",
+        "src": "0:22:8"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            1773
+          ],
+          "name": "SensorValueOracleInterface",
+          "scope": 1774
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "3b6f1566",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getLatestSensorValue",
+              "overrides": null,
+              "scope": 1773,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1768,
+                "name": "ParameterList",
+                "src": "99:2:8"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "overrides": null,
+                      "scope": 1772,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 1769,
+                        "name": "ElementaryTypeName",
+                        "src": "120:7:8"
+                      }
+                    ],
+                    "id": 1770,
+                    "name": "VariableDeclaration",
+                    "src": "120:7:8"
+                  }
+                ],
+                "id": 1771,
+                "name": "ParameterList",
+                "src": "119:9:8"
+              }
+            ],
+            "id": 1772,
+            "name": "FunctionDefinition",
+            "src": "70:59:8"
+          }
+        ],
+        "id": 1773,
+        "name": "ContractDefinition",
+        "src": "26:106:8"
+      }
+    ],
+    "id": 1774,
+    "name": "SourceUnit",
+    "src": "0:134:8"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.3+commit.8dda9521.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-06-18T07:43:27.880Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

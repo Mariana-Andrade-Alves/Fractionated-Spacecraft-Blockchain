@@ -1,0 +1,315 @@
+{
+  "contractName": "CommunicationOracleInterface",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "int256",
+          "name": "_sensorValue",
+          "type": "int256"
+        },
+        {
+          "internalType": "string",
+          "name": "_sensorType",
+          "type": "string"
+        }
+      ],
+      "name": "receiveSensorValue",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.3+commit.8dda9521\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"int256\",\"name\":\"_sensorValue\",\"type\":\"int256\"},{\"internalType\":\"string\",\"name\":\"_sensorType\",\"type\":\"string\"}],\"name\":\"receiveSensorValue\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/rsx02/hyperledger-besu/SubSystem Blockchain/contracts/CommunicationOracleInterface.sol\":\"CommunicationOracleInterface\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/rsx02/hyperledger-besu/SubSystem Blockchain/contracts/CommunicationOracleInterface.sol\":{\"keccak256\":\"0xd0884d606648b6455dd292effe116495a0be47fba36b5286d209a5336206c6c7\",\"urls\":[\"bzz-raw://b4f1186acb179e4388d7bef6f916369910b4bbdd58f106bf1e4f0df812bf6016\",\"dweb:/ipfs/Qmbv5amWCY4skmQfMoiSZ9KMXRjfSrYtTJ53hJERoStVgm\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.6.3;\n\ninterface CommunicationOracleInterface {\n    function receiveSensorValue(int256 _sensorValue, string calldata _sensorType) external;\n}\n",
+  "sourcePath": "/home/rsx02/hyperledger-besu/SubSystem Blockchain/contracts/CommunicationOracleInterface.sol",
+  "ast": {
+    "absolutePath": "/home/rsx02/hyperledger-besu/SubSystem Blockchain/contracts/CommunicationOracleInterface.sol",
+    "exportedSymbols": {
+      "CommunicationOracleInterface": [
+        1246
+      ]
+    },
+    "id": 1247,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1238,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".3"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:4"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 1246,
+        "linearizedBaseContracts": [
+          1246
+        ],
+        "name": "CommunicationOracleInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "f79efbb4",
+            "id": 1245,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "receiveSensorValue",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 1243,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1240,
+                  "name": "_sensorValue",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1245,
+                  "src": "97:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 1239,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "97:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1242,
+                  "name": "_sensorType",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1245,
+                  "src": "118:27:4",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1241,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "118:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "96:50:4"
+            },
+            "returnParameters": {
+              "id": 1244,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "155:0:4"
+            },
+            "scope": 1246,
+            "src": "69:87:4",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1247,
+        "src": "24:134:4"
+      }
+    ],
+    "src": "0:159:4"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/home/rsx02/hyperledger-besu/SubSystem Blockchain/contracts/CommunicationOracleInterface.sol",
+      "exportedSymbols": {
+        "CommunicationOracleInterface": [
+          1246
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.6",
+            ".3"
+          ]
+        },
+        "id": 1238,
+        "name": "PragmaDirective",
+        "src": "0:22:4"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            1246
+          ],
+          "name": "CommunicationOracleInterface",
+          "scope": 1247
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "f79efbb4",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "receiveSensorValue",
+              "overrides": null,
+              "scope": 1246,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_sensorValue",
+                      "overrides": null,
+                      "scope": 1245,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "int256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "int256",
+                          "type": "int256"
+                        },
+                        "id": 1239,
+                        "name": "ElementaryTypeName",
+                        "src": "97:6:4"
+                      }
+                    ],
+                    "id": 1240,
+                    "name": "VariableDeclaration",
+                    "src": "97:19:4"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_sensorType",
+                      "overrides": null,
+                      "scope": 1245,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 1241,
+                        "name": "ElementaryTypeName",
+                        "src": "118:6:4"
+                      }
+                    ],
+                    "id": 1242,
+                    "name": "VariableDeclaration",
+                    "src": "118:27:4"
+                  }
+                ],
+                "id": 1243,
+                "name": "ParameterList",
+                "src": "96:50:4"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1244,
+                "name": "ParameterList",
+                "src": "155:0:4"
+              }
+            ],
+            "id": 1245,
+            "name": "FunctionDefinition",
+            "src": "69:87:4"
+          }
+        ],
+        "id": 1246,
+        "name": "ContractDefinition",
+        "src": "24:134:4"
+      }
+    ],
+    "id": 1247,
+    "name": "SourceUnit",
+    "src": "0:159:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.3+commit.8dda9521.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-06-18T07:43:27.854Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

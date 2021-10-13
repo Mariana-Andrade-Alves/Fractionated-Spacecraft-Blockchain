@@ -1,0 +1,6 @@
+sensorValue :position
+sensorValue :position
+sensorValue :temperature
+sensorValue :temperature
+sensorValue :position
+sensorValue :temperature

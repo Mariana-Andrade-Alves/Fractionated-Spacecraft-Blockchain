@@ -1,0 +1,107 @@
+## Objective
+
+This repo contains the necessary code to perform the following
+
+-   Generates a besu network with **free gas**, PoA ibft2 consensus mechanism and 4 testing nodes
+-   Initiates 9 sensors (3 sensors for each subsystem) and connects them to the network on 3 different ports
+
+RE-COMPILE THE CONTRACTS (if changed)
+
+sudo truffle compile
+
+
+START A PRIVATE NETWORK IBFT-2.0
+
+NODE 1
+
+/home/rsx02/hyperledger-besu/besu/bin/besu --data-path=data --genesis-file=../genesis.json --rpc-http-enabled --rpc-ws-enabled --rpc-http-api=ETH,NET,IBFT,WEB3 --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-port=9545 --rpc-ws-port=9546
+
+
+enode://f50792c47906009aef19bdf921cb5a2690ca80078722cae96e52c6b4e0a8e89a0c2658b2a5f18d184b36d3f4428801d87ea1195ac8d3c3178cee372dc8f25160@127.0.0.1:30303
+
+NODE 2
+
+/home/rsx02/hyperledger-besu/besu/bin/besu --data-path=data --genesis-file=../genesis.json --bootnodes=enode://f50792c47906009aef19bdf921cb5a2690ca80078722cae96e52c6b4e0a8e89a0c2658b2a5f18d184b36d3f4428801d87ea1195ac8d3c3178cee372dc8f25160@127.0.0.1:30303 --p2p-port=30304 --rpc-http-enabled --rpc-http-api=ETH,NET,IBFT --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-port=9547
+
+
+NODE 3
+
+/home/rsx02/hyperledger-besu/besu/bin/besu --data-path=data --genesis-file=../genesis.json --bootnodes=enode://f50792c47906009aef19bdf921cb5a2690ca80078722cae96e52c6b4e0a8e89a0c2658b2a5f18d184b36d3f4428801d87ea1195ac8d3c3178cee372dc8f25160@127.0.0.1:30303 --p2p-port=30305 --rpc-http-enabled --rpc-http-api=ETH,NET,IBFT --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-port=8547
+
+
+NODE 4
+
+/home/rsx02/hyperledger-besu/besu/bin/besu --data-path=data --genesis-file=../genesis.json --bootnodes=enode://f50792c47906009aef19bdf921cb5a2690ca80078722cae96e52c6b4e0a8e89a0c2658b2a5f18d184b36d3f4428801d87ea1195ac8d3c3178cee372dc8f25160@127.0.0.1:30303 --p2p-port=30306 --rpc-http-enabled --rpc-http-api=ETH,NET,IBFT --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-port=8548
+
+
+
+MIGRATE THE CONTRACTS
+
+sudo truffle migrate --reset --network besuWallet
+
+
+THE ORIGINAL ORACLE'S ADDRESS IS:
+0xf17f52151EbEF6C7334FAD080c5704D77216b732
+(it will add all the oracles to the system, 
+it is defined in migrations file,
+if it is removed, setup file won't work)
+
+
+START THE SYSTEM SETUP (choose values for thr threshold, the reputation threshold and the maximum variation of each system)
+
+$ sudo python3 SystemSetup.py [port]
+
+sudo python3 SystemSetup.py 8547
+
+
+
+START THE ORACLES
+
+
+SYMMETRIC SENSOR
+
+$ sudo python3 SymmetricSensorOracle.py [supervisor_private_key] [port] [sensorFile]
+
+sudo python3 SymmetricSensorOracle.py 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 9545 Files/symmetricSensorFiles/sensorvalue.txt
+
+sudo python3 SymmetricSensorOracle.py 0xc87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3 9547 Files/symmetricSensorFiles/sensorvalue.txt
+
+sudo python3 SymmetricSensorOracle.py 0xae6ae8e5ccbfb04590405997ee2d52d2b330726137b875053c36d94e974d162f 8547 Files/symmetricSensorFiles/sensorvalue.txt
+(test a malicious node)
+sudo python3 SymmetricSensorOracle.py 0xae6ae8e5ccbfb04590405997ee2d52d2b330726137b875053c36d94e974d162f 8547 Files/symmetricSensorFiles/sensorvalueBAD.txt
+
+
+ASYMMETRIC SENSOR 
+
+$ sudo python3 AsymmetricSensorOracle.py [supervisor_private_key] [port] [sensorFile] [relativeSensorFile]
+
+sudo python3 AsymmetricSensorOracle.py 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 9545 Files/asymmetricSensorFiles/sensorvalue1.txt Files/asymmetricSensorFiles/sensorvalueRelative1.txt
+
+sudo python3 AsymmetricSensorOracle.py 0xc87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3 9547 Files/asymmetricSensorFiles/sensorvalue2.txt Files/asymmetricSensorFiles/sensorvalueRelative2.txt
+
+sudo python3 AsymmetricSensorOracle.py 0xae6ae8e5ccbfb04590405997ee2d52d2b330726137b875053c36d94e974d162f 8547 Files/asymmetricSensorFiles/sensorvalue3.txt Files/asymmetricSensorFiles/sensorvalueRelative3.txt
+(test a malicious node)
+sudo python3 AsymmetricSensorOracle.py 0xae6ae8e5ccbfb04590405997ee2d52d2b330726137b875053c36d94e974d162f 8547 Files/asymmetricSensorFiles/sensorvalueBAD.txt Files/asymmetricSensorFiles/sensorvalueRelative3.txt
+
+
+COMMUNICATION 
+
+$ sudo python3 CommunicationOracle.py [supervisor_private_key] [port] [responseFile]
+
+sudo python3 CommunicationOracle.py 0xc87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3 9545 Files/response_sat_1.txt Files/commands_sat.txt
+
+sudo python3 CommunicationOracle.py 0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63 9547 Files/response_sat_2.txt Files/commands_sat.txt
+
+sudo python3 CommunicationOracle.py 0xae6ae8e5ccbfb04590405997ee2d52d2b330726137b875053c36d94e974d162f 9547 Files/response_sat_3.txt Files/commands_sat.txt
+
+
+
+
+
+
+
+
+
+
+
+
