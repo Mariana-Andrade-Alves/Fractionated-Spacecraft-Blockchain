@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Alves"
+  given-names: "Mariana"
+  orcid: "https://orcid.org/0000-0003-1955-0435"
+- family-names: "Veirier d'Aiguebonne"
+  given-names: "Justine"
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+- family-names: "Gateau"
+  given-names: "Thibault"
+  orcid: " https://orcid.org/0000-0002-8719-5044"
+- family-names: "Lacan"
+  given-names: "Jérôme"
+  orcid: " https://orcid.org/0000-0002-3121-4824"
+title: "Fractionated-Spacecraft-Blockchain"
+version: 1.0.0
+doi: 10.5281/zenodo.1234
+date-released: 2021-10-13
+url: "https://github.com/Mariana-Andrade-Alves/Fractionated-Spacecraft-Blockchain"
