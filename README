@@ -13,25 +13,26 @@ sudo truffle compile
 START A PRIVATE NETWORK IBFT-2.0
 
 NODE 1
+(PATH is to fill with correct location of besu)
 
-/home/rsx02/hyperledger-besu/besu/bin/besu --data-path=data --genesis-file=../genesis.json --rpc-http-enabled --rpc-ws-enabled --rpc-http-api=ETH,NET,IBFT,WEB3 --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-port=9545 --rpc-ws-port=9546
+PATH/hyperledger-besu/besu/bin/besu --data-path=data --genesis-file=../genesis.json --rpc-http-enabled --rpc-ws-enabled --rpc-http-api=ETH,NET,IBFT,WEB3 --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-port=9545 --rpc-ws-port=9546
 
-
-enode://f50792c47906009aef19bdf921cb5a2690ca80078722cae96e52c6b4e0a8e89a0c2658b2a5f18d184b36d3f4428801d87ea1195ac8d3c3178cee372dc8f25160@127.0.0.1:30303
+-- Retrieve the enode address and substitute in the following 3 commands. Example:
+      enode://f50792c47906009aef19bdf921cb5a2690ca80078722cae96e52c6b4e0a8e89a0c2658b2a5f18d184b36d3f4428801d87ea1195ac8d3c3178cee372dc8f25160@127.0.0.1:30303
 
 NODE 2
 
-/home/rsx02/hyperledger-besu/besu/bin/besu --data-path=data --genesis-file=../genesis.json --bootnodes=enode://f50792c47906009aef19bdf921cb5a2690ca80078722cae96e52c6b4e0a8e89a0c2658b2a5f18d184b36d3f4428801d87ea1195ac8d3c3178cee372dc8f25160@127.0.0.1:30303 --p2p-port=30304 --rpc-http-enabled --rpc-http-api=ETH,NET,IBFT --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-port=9547
+PATH/hyperledger-besu/besu/bin/besu --data-path=data --genesis-file=../genesis.json --bootnodes=enode://f50792c47906009aef19bdf921cb5a2690ca80078722cae96e52c6b4e0a8e89a0c2658b2a5f18d184b36d3f4428801d87ea1195ac8d3c3178cee372dc8f25160@127.0.0.1:30303 --p2p-port=30304 --rpc-http-enabled --rpc-http-api=ETH,NET,IBFT --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-port=9547
 
 
 NODE 3
 
-/home/rsx02/hyperledger-besu/besu/bin/besu --data-path=data --genesis-file=../genesis.json --bootnodes=enode://f50792c47906009aef19bdf921cb5a2690ca80078722cae96e52c6b4e0a8e89a0c2658b2a5f18d184b36d3f4428801d87ea1195ac8d3c3178cee372dc8f25160@127.0.0.1:30303 --p2p-port=30305 --rpc-http-enabled --rpc-http-api=ETH,NET,IBFT --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-port=8547
+PATH/hyperledger-besu/besu/bin/besu --data-path=data --genesis-file=../genesis.json --bootnodes=enode://f50792c47906009aef19bdf921cb5a2690ca80078722cae96e52c6b4e0a8e89a0c2658b2a5f18d184b36d3f4428801d87ea1195ac8d3c3178cee372dc8f25160@127.0.0.1:30303 --p2p-port=30305 --rpc-http-enabled --rpc-http-api=ETH,NET,IBFT --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-port=8547
 
 
 NODE 4
 
-/home/rsx02/hyperledger-besu/besu/bin/besu --data-path=data --genesis-file=../genesis.json --bootnodes=enode://f50792c47906009aef19bdf921cb5a2690ca80078722cae96e52c6b4e0a8e89a0c2658b2a5f18d184b36d3f4428801d87ea1195ac8d3c3178cee372dc8f25160@127.0.0.1:30303 --p2p-port=30306 --rpc-http-enabled --rpc-http-api=ETH,NET,IBFT --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-port=8548
+PATH/hyperledger-besu/besu/bin/besu --data-path=data --genesis-file=../genesis.json --bootnodes=enode://f50792c47906009aef19bdf921cb5a2690ca80078722cae96e52c6b4e0a8e89a0c2658b2a5f18d184b36d3f4428801d87ea1195ac8d3c3178cee372dc8f25160@127.0.0.1:30303 --p2p-port=30306 --rpc-http-enabled --rpc-http-api=ETH,NET,IBFT --host-allowlist="*" --rpc-http-cors-origins="all" --rpc-http-port=8548
 
 
 
